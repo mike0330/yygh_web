@@ -118,7 +118,7 @@ export default {
     handleLock(row){
       lockHospSetApi(row.id,0).then(res=>{
         this.getList()
-        this.$modal.msgSuccess('锁定成功');
+        this.$modal.msgSuccess('锁定成功')
       })
     },
     handleUnlock(row){
