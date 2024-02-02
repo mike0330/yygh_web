@@ -56,23 +56,23 @@ export const constantRoutes = [
   },
 
   {
-    path: '/example',
+    path: '/hospset',
     component: Layout,
-    redirect: '/example/table',
+    redirect: '/hospset/list',
     name: 'Example',
-    meta: { title: 'Example', icon: 'el-icon-s-help' },
+    meta: { title: '医院设置管理', icon: 'el-icon-s-help' },
     children: [
       {
-        path: 'table',
-        name: 'Table',
-        component: () => import('@/views/table/index'),
-        meta: { title: 'Table', icon: 'table' }
+        path: 'list',
+        name: 'hospsetList',
+        component: () => import('@/views/hospset/hospsetList.vue'),
+        meta: { title: '医院设置列表', icon: 'table' }
       },
       {
-        path: 'tree',
-        name: 'Tree',
+        path: 'add',
+        name: 'hospsetAdd',
         component: () => import('@/views/tree/index'),
-        meta: { title: 'Tree', icon: 'tree' }
+        meta: { title: '医院设置添加', icon: 'tree' }
       }
     ]
   },
